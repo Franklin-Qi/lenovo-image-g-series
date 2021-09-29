@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=G_Series Lenovo Image Print
+Name[zh_CN]=G 系列_联想图像打印
+GenericName=G_Series Lenovo Print
+GenericName[zh_CN]=
+Comment=G_Series Lenovo Image Print
+Comment[zh_CN]=G 系列_联想图像打印
+Exec=/usr/bin/lntgr3zvop
+Categories=Application;Settings;
+Terminal=false
+Icon=lntgr3z_printer

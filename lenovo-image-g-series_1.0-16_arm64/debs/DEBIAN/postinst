@@ -1,0 +1,50 @@
+#!/bin/bash
+sudo chmod 666 /usr/share/lntgr3z/config/app.conf
+#ln -s /usr/lib/liblntgr3z.so.1 /usr/lib/liblntgr3z.so
+#if [ -f "/usr/bin/lntgr3zsmui" ]
+#then
+ #   /usr/bin/lntgr3zsmui -hide & 2>/dev/null
+ #nohup lntgr3zsmui -hide & 2> /dev/null &
+#fi
+# get the cpu info begin
+hdid=$(sudo hdparm -i /dev/sda |grep SerialNo 2>>/dev/null)
+#echo $hdid
+hdid1=${hdid#*SerialNo=}
+#echo $hdid1
+if [ "$hdid1" == "" ]; then
+	cpuid=$(sudo dmidecode -t 4 |grep ID 2>>/dev/null)
+	#echo $cpuid
+
+	#echo $cpuid | sed s/[[:space:]]//g
+	cpuid2=$(echo $cpuid |sed s/[[:space:]]//g 2>>/dev/null)
+	#echo $cpuid2
+
+	#echo $cpuid2 | sed s/ID://g
+	cpuid3=$(echo $cpuid2 |sed s/ID://g 2>>/dev/null)
+	#echo $cpuid3
+	#echo $cpuid2
+	#echo $cpuid
+	#cpuid3=""
+	if [ "$cpuid3" == "" ]; then
+#		echo "cpuid3 is null"
+#		cpuid=$(cat /proc/sys/kernel/random/uuid | sed s/-//g 2>>/dev/null)
+#		echo $cpuid
+#		cpuid3=${cpuid:0:16}
+#		echo $cpuid3
+	#else
+	#	echo $cpuid3 > cupid_file
+	cpuid3="ABCDEF1234567890"
+	fi
+	cpuid3=${cpuid3:0:16}
+	echo $cpuid3 > /usr/share/lntgr3z/info.ini
+	#sudo dmidecode -t 4 |grep ID >/usr/share/lntgr3z/info.ini
+else
+	echo $hdid1 > /usr/share/lntgr3z/info.ini
+fi
+
+#get cpu infor end  
+if [ -f "/usr/sbin/lntgr3zservice" ]
+then
+update-rc.d lntgr3zserviced defaults 90 10
+service lntgr3zserviced start
+fi

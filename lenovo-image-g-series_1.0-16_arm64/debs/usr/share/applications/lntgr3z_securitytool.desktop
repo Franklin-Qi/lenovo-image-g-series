@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=G_Series security tool
+Name[zh_CN]=G 系列_安全管理工具
+GenericName=G_Series security tool
+GenericName[zh_CN]=
+Comment=G_Series security tool
+Comment[zh_CN]=G 系列_安全管理工具
+Exec=/usr/bin/lntgr3zsecuritytool
+Categories=Application;Settings;
+Terminal=false
+Icon=lntgr3zsecuritytool

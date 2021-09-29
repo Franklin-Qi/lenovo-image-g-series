@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=G_Series status monitor
+Name[zh_CN]=G 系列_状态监视器
+GenericName=G_Series status monitor
+GenericName[zh_CN]=G 系列_状态监视器
+Comment=G_Series status monitor
+Comment[zh_CN]=G 系列_状态监视器
+Exec=/usr/bin/lntgr3zsmui
+Categories=Application;Settings;
+Terminal=false
+Icon=lntgr3zstatusmonitor.png

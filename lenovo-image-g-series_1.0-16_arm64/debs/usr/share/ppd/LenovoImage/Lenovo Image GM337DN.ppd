@@ -1,0 +1,469 @@
+*PPD-Adobe: "4.3"
+*FileVersion: "1.004"
+*FormatVersion: "4.3"
+*LanguageEncoding: ISOLatin1
+*LanguageVersion: English
+
+*Manufacturer: "Lenovo Image"
+*PCFileName: "Lenovo Image GM337DN.PPD"
+*Product: "(Lenovo Image GM337DN)"
+*PSVersion: "(3015.103) 1"
+*ShortNickName: "Lenovo Image GM337DN"
+*ModelName: "Lenovo Image GM337DN"
+*NickName: "Lenovo Image GM337DN v1.004"
+*cupsFilter:	"application/vnd.cups-raster 50 lntgr3zfilter.app"
+
+
+
+*% == Constraints ==
+
+
+
+
+*UIConstraints: *Duplex DuplexNoTumble *MediaType PlainThick
+*UIConstraints: *Duplex DuplexTumble *MediaType PlainThick
+*UIConstraints: *MediaType PlainThick *Duplex DuplexNoTumble
+*UIConstraints: *MediaType PlainThick *Duplex DuplexTumble
+
+*UIConstraints: *Duplex DuplexNoTumble *PageSize A6
+*UIConstraints: *Duplex DuplexTumble *PageSize A6
+*UIConstraints: *PageSize A6 *Duplex DuplexNoTumble
+*UIConstraints: *PageSize A6 *Duplex DuplexTumble
+
+*UIConstraints: *Duplex DuplexNoTumble *PageSize Executive
+*UIConstraints: *Duplex DuplexTumble *PageSize Executive
+*UIConstraints: *PageSize Executive *Duplex DuplexNoTumble
+*UIConstraints: *PageSize Executive *Duplex DuplexTumble
+
+*UIConstraints: *Duplex DuplexNoTumble *PageSize 16K
+*UIConstraints: *Duplex DuplexTumble *PageSize 16K
+*UIConstraints: *PageSize 16K *Duplex DuplexNoTumble
+*UIConstraints: *PageSize 16K *Duplex DuplexTumble
+
+*UIConstraints: *Duplex DuplexNoTumble *PageSize B6
+*UIConstraints: *Duplex DuplexTumble *PageSize B6
+*UIConstraints: *PageSize B6 *Duplex DuplexNoTumble
+*UIConstraints: *PageSize B6 *Duplex DuplexTumble
+
+*UIConstraints: *Duplex DuplexNoTumble *PageSize A5
+*UIConstraints: *Duplex DuplexTumble *PageSize A5
+*UIConstraints: *PageSize A5 *Duplex DuplexNoTumble
+*UIConstraints: *PageSize A5 *Duplex DuplexTumble
+
+
+*UIConstraints: *Duplex DuplexNoTumble *PageSize B5
+*UIConstraints: *Duplex DuplexTumble *PageSize B5
+*UIConstraints: *PageSize B5 *Duplex DuplexNoTumble
+*UIConstraints: *PageSize B5 *Duplex DuplexTumble
+
+
+
+
+
+
+*UIConstraints: *Duplex DuplexNoTumble *LVSaveBlankSheet True
+*UIConstraints: *Duplex DuplexTumble *LVSaveBlankSheet True
+*UIConstraints: *LVSaveBlankSheet True *Duplex DuplexNoTumble
+*UIConstraints: *LVSaveBlankSheet True *Duplex DuplexTumble
+
+
+
+
+
+
+*% ==== Device Capabilities ===============
+*LanguageLevel: "3"
+*1284DeviceID: "MFG:Lenovo Image;MDL:GM337DN;DES:Lenovo Image GM337DN;CMD:GDI;CLS:PRINTER;"
+*End
+
+*ColorDevice:	False
+*DefaultColorSpace: Grayscale
+*VariablePaperSize: True
+*LandscapeOrientation: Plus90
+*TTRasterizer: Type42
+*?TTRasterizer: "
+save
+    42 /FontType resourcestatus
+    {pop pop (Type42)}{(No Type42)} ifelse = flush
+restore
+"
+*End
+*FileSystem: True
+*?FileSystem: "
+  save false
+   (%disk?%)
+   { currentdevparams dup /Writeable known
+      { /Writeable get {pop true} if }  { pop } ifelse
+    } 10 string /IODevice resourceforall
+    {(True)}{(False)} ifelse = flush
+ restore
+"
+*End
+
+*Throughput: "25"
+*Password: "()"
+*ExitServer: "
+ count 0 eq
+ { false } { true exch startjob } ifelse
+ not {
+     (WARNING: Cannot modify initial VM.) =
+     (Missing or invalid password.) =
+     (Please contact the author of this software.) = flush quit
+     } if
+"
+*End
+*Reset: "
+ count 0 eq
+ { false } { true exch startjob } ifelse
+ not {
+    (WARNING: Cannot reset printer.) =
+    (Missing or invalid password.) =
+    (Please contact the author of this software.) = flush quit
+    } if
+ systemdict /quit get exec
+ (WARNING : Printer Reset Failed.) = flush
+"
+*End
+
+*AccurateScreensSupport: True
+*SuggestedJobTimeout: "0"
+*SuggestedWaitTimeout: "300"
+*PrintPSErrors: True
+*APSupportsCustomColorMatching: true
+*APDefaultCustomColorMatchingProfile: sRGB
+*APCustomColorMatchingProfile: sRGB
+
+
+
+
+*% Paper Handling ===================
+*OpenUI *PageSize/Media Size: PickOne
+*OrderDependency: 10 AnySetup *PageSize
+*DefaultPageSize: Letter
+*PageSize Letter/US Letter: "<</PageSize[612 792]/ImagingBBox null>>setpagedevice"
+*PageSize A4/A4: "<</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*PageSize A5/A5: "<</PageSize[420 595]/ImagingBBox null>>setpagedevice"
+*PageSize A6/A6: "<</PageSize[297 420]/ImagingBBox null>>setpagedevice"
+*PageSize B5/JIS B5: "<</PageSize[516 729]/ImagingBBox null>>setpagedevice"
+*PageSize B6/JIS B6: "<</PageSize[363 516]/ImagingBBox null>>setpagedevice"
+*PageSize Executive/Executive: "<</PageSize[522 756]/ImagingBBox null>>setpagedevice"
+*PageSize 16K/16K: "<</PageSize[524 737]/ImagingBBox null>>setpagedevice"
+*%PageSize A5LEF/A5(LEF): "<</PageSize[595 420]/ImagingBBox null>>setpagedevice"
+*%PageSize B6LEF/JIS B6(LEF): "<</PageSize[516 363]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageSize
+*OpenUI *PageRegion/Media Size: PickOne
+*OrderDependency: 10 AnySetup *PageRegion
+*DefaultPageRegion: Letter
+*PageRegion Letter/US Letter: "<</PageSize[612 792]/ImagingBBox null>>setpagedevice"
+*PageRegion A4/A4: "<</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*PageRegion A5/A5: "<</PageSize[420 595]/ImagingBBox null>>setpagedevice"
+*PageRegion A6/A6: "<</PageSize[297 420]/ImagingBBox null>>setpagedevice"
+*PageRegion B5/JIS B5: "<</PageSize[516 729]/ImagingBBox null>>setpagedevice"
+*PageRegion B6/JIS B6: "<</PageSize[363 516]/ImagingBBox null>>setpagedevice"
+*PageRegion Executive/Executive: "<</PageSize[522 756]/ImagingBBox null>>setpagedevice"
+*PageRegion 16K/16K: "<</PageSize[524 737]/ImagingBBox null>>setpagedevice"
+*%PageRegion A5LEF/A5(LEF): "<</PageSize[595 420]/ImagingBBox null>>setpagedevice"
+*%PageRegion B6LEF/JIS B6(LEF): "<</PageSize[516 363]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageRegion
+*DefaultImageableArea: Letter
+*ImageableArea Letter/US Letter: "11.905511856079 11.905511856079 600.094482421875 780.094482421875"
+*ImageableArea A4/A4: "11.905511856079 11.905511856079 583.094482421875 830.094482421875"
+*ImageableArea A5/A5: "11.905511856079 11.905511856079 408.094482421875 583.094482421875"
+*ImageableArea A6/A6: "11.905511856079 11.905511856079 285.094482421875 408.094482421875"
+*ImageableArea B5/JIS B5: "11.905511856079 11.905511856079 504.094482421875 717.094482421875"
+*ImageableArea B6/JIS B6: "11.905511856079 11.905511856079 351.094482421875 504.094482421875"
+*ImageableArea Executive/Executive: "11.905511856079 11.905511856079 510.094482421875 744.094482421875"
+*ImageableArea 16K/16K: "11.905511856079 11.905511856079 512.094482421875 725.094482421875"
+*%ImageableArea A5LEF/A5(LEF): "11.905511856079 11.905511856079 583.094482421875 408.094482421875"
+*%ImageableArea B6LEF/JIS B6(LEF): "11.905511856079 11.905511856079 504.094482421875 351.094482421875"
+*DefaultPaperDimension: Letter
+*PaperDimension Letter/US Letter: "612 792"
+*PaperDimension A4/A4: "595 842"
+*PaperDimension A5/A5: "420 595"
+*PaperDimension A6/A6: "297 420"
+*PaperDimension B5/JIS B5: "516 729"
+*PaperDimension B6/JIS B6: "363 516"
+*PaperDimension Executive/Executive: "522 756"
+*PaperDimension 16K/16K: "524 737"
+*%PaperDimension A5LEF/A5(LEF): "595 420"
+*%PaperDimension B6LEF/JIS B6(LEF): "516 363"
+*MaxMediaWidth: "612"
+*MaxMediaHeight: "842"
+*HWMargins: 11.905511856079 11.905511856079 11.905511856079 11.905511856079
+*CustomPageSize True: "pop pop pop <</PageSize[5 -2 roll]/ImagingBBox null>>setpagedevice"
+*ParamCustomPageSize Width: 1 points 283.4646 612
+*ParamCustomPageSize Height: 2 points 360 842
+*ParamCustomPageSize WidthOffset: 3 points 0 0
+*ParamCustomPageSize HeightOffset: 4 points 0 0
+*ParamCustomPageSize Orientation: 5 int 0 0
+
+
+*LeadingEdge Short: ""
+*DefaultLeadingEdge: Short
+
+
+
+
+
+*OpenGroup: Graphics/Detailed Settings
+*% OutputMode Information ===================
+
+
+*AccurateScreensSupport: True
+*OpenUI *DrvResolution/Image Quality: PickOne
+*OrderDependency: 20 AnySetup *DrvResolution
+*DefaultDrvResolution: 600dpi
+*DrvResolution 600dpi/600DPI: "<</HWResolution [600 600]>>setpagedevice"
+*DrvResolution 1200dpi/1200DPI: "<</HWResolution [1200 600]>>setpagedevice"
+*CloseUI: *DrvResolution
+
+*AccurateScreensSupport: True
+*OpenUI *ColorModel/Output Color: PickOne
+*OrderDependency: 30 AnySetup *ColorModel
+*DefaultColorModel: Gray
+*ColorModel Gray/Black: "<</cupsBitsPerPixel 8/cupsBitsPerColor 8/cupsColorSpace 0/NegativePrint true>>setpagedevice"
+*CloseUI: *ColorModel
+
+*% Image Rotation ===============
+*OpenUI *ImageRotation/Image Rotation 180 degree: Boolean
+*OrderDependency: 15.0 AnySetup *ImageRotation
+*DefaultImageRotation: False
+*ImageRotation False/Off: "<</ImageRotation false >>setpagedevice"
+*ImageRotation True/On: "<</ImageRotation true >>setpagedevice"
+*CloseUI: *ImageRotation
+*% Toner Mode ===============
+*OpenUI *TonerMode/Toner Saving Mode: PickOne
+*OrderDependency: 15.0 AnySetup *TonerMode
+*DefaultTonerMode: 0
+*TonerMode 1/On: "<</TonerMode>>setpagedevice"
+*TonerMode 0/Off: "<</TonerMode>>setpagedevice"
+*CloseUI: *TonerMode
+
+*ColorKeyWords: "StpBrightness"
+*OpenUI *StpBrightness/Brightness: PickOne
+*OrderDependency: 41.0 AnySetup *StpBrightness
+*DefaultStpBrightness: 200
+*StpBrightness 100/-100: "<</StpBrightness>>setpagedevice"
+*StpBrightness 120/-80: "<</StpBrightness>>setpagedevice"
+*StpBrightness 140/-60: "<</StpBrightness>>setpagedevice"
+*StpBrightness 160/-40: "<</StpBrightness>>setpagedevice"
+*StpBrightness 180/-20: "<</StpBrightness>>setpagedevice"
+*StpBrightness 200/0: "<</StpBrightness>>setpagedevice"
+*StpBrightness 220/20: "<</StpBrightness>>setpagedevice"
+*StpBrightness 240/40: "<</StpBrightness>>setpagedevice"
+*StpBrightness 260/60: "<</StpBrightness>>setpagedevice"
+*StpBrightness 280/80: "<</StpBrightness>>setpagedevice"
+*StpBrightness 300/100: "<</StpBrightness>>setpagedevice"
+*CloseUI: *StpBrightness
+*CloseGroup: Graphics
+
+
+*OpenGroup: ColorBalanceGroup/Color Balance
+*OpenUI *LVColorDensityBlackLow/Low Density (K): PickOne
+*OrderDependency: 50.0 AnySetup *LVColorDensityBlackLow
+*DefaultLVColorDensityBlackLow: 0
+*LVColorDensityBlackLow 3/Darker (+3): "/Black/Low 3/Custom/ProcSet"
+*LVColorDensityBlackLow 2/Darker (+2): "/Black/Low 2/Custom/ProcSet"
+*LVColorDensityBlackLow 1/Darker (+1): "/Black/Low 1/Custom/ProcSet"
+*LVColorDensityBlackLow 0/Normal (0): "/Black/Low 0/Custom/ProcSet"
+*LVColorDensityBlackLow -1/Lighter (-1): "/Black/Low -1/Custom/ProcSet"
+*LVColorDensityBlackLow -2/Lighter (-2): "/Black/Low -2/Custom/ProcSet"
+*LVColorDensityBlackLow -3/Lighter (-3): "/Black/Low -3/Custom/ProcSet"
+*CloseUI: *LVColorDensityBlackLow
+
+*OpenUI *LVColorDensityBlackMid/Medium Density (K): PickOne
+*OrderDependency: 51.0 AnySetup *LVColorDensityBlackMid
+*DefaultLVColorDensityBlackMid: 0
+*LVColorDensityBlackMid 3/Darker (+3): "/Black/Middle 3/Custom/ProcSet"
+*LVColorDensityBlackMid 2/Darker (+2): "/Black/Middle 2/Custom/ProcSet"
+*LVColorDensityBlackMid 1/Darker (+1): "/Black/Middle 1/Custom/ProcSet"
+*LVColorDensityBlackMid 0/Normal (0): "/Black/Middle 0/Custom/ProcSet"
+*LVColorDensityBlackMid -1/Lighter (-1): "/Black/Middle -1/Custom/ProcSet"
+*LVColorDensityBlackMid -2/Lighter (-2): "/Black/Middle -2/Custom/ProcSet"
+*LVColorDensityBlackMid -3/Lighter (-3): "/Black/Middle -3/Custom/ProcSet"
+*CloseUI: *LVColorDensityBlackMid
+
+*OpenUI *LVColorDensityBlackHigh/High Density (K): PickOne
+*OrderDependency: 52.0 AnySetup *LVColorDensityBlackHigh
+*DefaultLVColorDensityBlackHigh: 0
+*LVColorDensityBlackHigh 3/Darker (+3): "/Black/High 3/Custom/ProcSet"
+*LVColorDensityBlackHigh 2/Darker (+2): "/Black/High 2/Custom/ProcSet"
+*LVColorDensityBlackHigh 1/Darker (+1): "/Black/High 1/Custom/ProcSet"
+*LVColorDensityBlackHigh 0/Normal (0): "/Black/High 0/Custom/ProcSet"
+*LVColorDensityBlackHigh -1/Lighter (-1): "/Black/High -1/Custom/ProcSet"
+*LVColorDensityBlackHigh -2/Lighter (-2): "/Black/High -2/Custom/ProcSet"
+*LVColorDensityBlackHigh -3/Lighter (-3): "/Black/High -3/Custom/ProcSet"
+*CloseUI: *LVColorDensityBlackHigh
+*CloseGroup: ColorBalanceGroup
+
+
+*OpenGroup: AdvancedMedia/Paper Handling
+*% Collate ===============
+*OpenUI *Collate/Collated: Boolean
+*OrderDependency: 15.0 AnySetup *Collate
+*DefaultCollate: False
+*Collate False/Off: "<</Collate false >>setpagedevice"
+*Collate True/On: "<</Collate true >>setpagedevice"
+*CloseUI: *Collate
+
+*% MediaType ===============
+*OpenUI *MediaType/Paper Type: PickOne
+*OrderDependency: 10 AnySetup *MediaType
+*DefaultMediaType: Plain
+*MediaType Plain/Plain Paper:	"<</MediaType(Plain)/cupsMediaType 0>>setpagedevice"
+*MediaType Recycled/Recycled Paper:	"<</MediaType(Recycled)/cupsMediaType 1>>setpagedevice"
+*MediaType PlainThick/Thick Paper:	"<</MediaType(Plain Thick)/cupsMediaType 2>>setpagedevice"
+*%MediaType PlainThin/Plain Thin: "<</MediaType(Plain Thin)/cupsMediaType 3>>setpagedevice"
+*%MediaType Label/Label:	"<</MediaType(Label)/cupsMediaType 4>>setpagedevice"
+*CloseUI: *MediaType
+
+*OpenUI *Duplex/Duplex: PickOne
+*OrderDependency: 31 AnySetup *Duplex
+*DefaultDuplex: None
+*Duplex None/1 Sided Print: ""
+*Duplex DuplexNoTumble/Flip on Long Edge: "<</Duplex true /Tumble false>>setpagedevice"
+*Duplex DuplexTumble/Flip on Short Edge: "<</Duplex true /Tumble true>>setpagedevice"
+*CloseUI: *Duplex
+
+
+*CloseGroup: AdvancedMedia
+
+
+
+*OpenGroup: PrinterFunction/Printer Specific Options
+*% Color Control ===============
+*OpenUI *LVSaveBlankSheet/Skip Blank Pages: Boolean
+*OrderDependency: 40.0 AnySetup *LVSaveBlankSheet
+*DefaultLVSaveBlankSheet: False
+*LVSaveBlankSheet False/Off: "<</LVSaveBlankSheet false >>setpagedevice"
+*LVSaveBlankSheet True/On: "<</LVSaveBlankSheet true >>setpagedevice"
+*CloseUI: *LVSaveBlankSheet
+
+*% encryption  Mode ===============
+*OpenUI *LVEncryptionMode/Encryption Data: Boolean
+*OrderDependency: 40.0 AnySetup *LVEncryptionMode
+*DefaultLVEncryptionMode: False
+*LVEncryptionMode False/Off: "<</LVEncryptionMode false >>setpagedevice"
+*LVEncryptionMode True/On: "<</LVEncryptionMode true >>setpagedevice"
+*CloseUI: *LVEncryptionMode
+
+*% Print Trace  Mode ===============
+*OpenUI *LVPrintTrace/Print Trace: Boolean
+*OrderDependency: 40.0 AnySetup *LVPrintTrace
+*DefaultLVPrintTrace: False
+*LVPrintTrace False/Off: "<</LVPrintTrace false >>setpagedevice"
+*LVPrintTrace True/On: "<</LVPrintTrace true >>setpagedevice"
+*CloseUI: *LVPrintTrace
+
+
+*CloseGroup: PrinterFunction
+
+*% Input Sources (format: %%[ status: <stat>; source: <one of these> ]%% )
+*Source: "USB"
+*Source: "EtherTalk"
+
+
+
+*cupsLanguages: "zh_CN"
+
+*% === Simplified Chinese ===
+*zh_CN.Translation General/一般设定: ""
+*zh_CN.Translation PageSize/纸张尺寸: ""
+*zh_CN.PageSize A4/A4: ""
+*zh_CN.PageSize A5/A5: ""
+*zh_CN.PageSize A6/A6: ""
+*zh_CN.PageSize B5/JIS B5: ""
+*zh_CN.PageSize B6/JIS B6: ""
+*zh_CN.PageSize Letter/US Letter: ""
+*zh_CN.PageSize Executive/Executive: ""
+*zh_CN.PageSize 16K/16K: ""
+*zh_CN.PageSize A5LEF/A5(LEF): ""
+*zh_CN.PageSize B6LEF/JIS B6(LEF): ""
+
+*zh_CN.Translation PageRegion/纸张边界: ""
+*zh_CN.PageRegion A4/A4: ""
+*zh_CN.PageRegion A5/A5: ""
+*zh_CN.PageRegion A6/A6: ""
+*zh_CN.PageRegion B5/JIS B5: ""
+*zh_CN.PageRegion B6/JIS B6: ""
+*zh_CN.PageRegion Letter/US Letter: ""
+*zh_CN.PageRegion Executive/Executive: ""
+*zh_CN.PageRegion 16K/16K: ""
+*zh_CN.PageRegion A5LEF/A5(LEF): ""
+*zh_CN.PageRegion B6LEF/JIS B6(LEF): ""
+
+*zh_CN.Translation Graphics/详细设定: ""
+*zh_CN.Translation ColorModel/色彩模式: ""
+*zh_CN.ColorModel Gray/黑白: ""
+
+*zh_CN.Translation DrvResolution/图像质量: ""
+*zh_CN.DrvResolution 600dpi/600DPI: ""
+*zh_CN.DrvResolution 1200dpi/1200DPI: ""
+
+*zh_CN.Translation Duplex/双面打印: ""
+*zh_CN.Duplex None/单面打印: ""
+*zh_CN.Duplex DuplexNoTumble/长边翻页: ""
+*zh_CN.Duplex DuplexTumble/短边翻页: ""
+
+
+*zh_CN.Translation StpBrightness/亮度: ""
+
+*zh_CN.Translation TonerMode/省墨模式: ""
+*zh_CN.TonerMode 0/关: ""
+*zh_CN.TonerMode 1/开: ""
+
+*zh_CN.Translation ImageRotation/图像旋转(180度): ""
+*zh_CN.ImageRotation False/关: ""
+*zh_CN.ImageRotation True/开: ""
+
+*zh_CN.Translation ColorBalanceGroup/色彩平衡: ""
+*zh_CN.Translation LVColorDensityBlackLow/低浓度(K): ""
+*zh_CN.LVColorDensityBlackLow 3/暗色 (+3): ""
+*zh_CN.LVColorDensityBlackLow 2/暗色 (+2): ""
+*zh_CN.LVColorDensityBlackLow 1/暗色 (+1): ""
+*zh_CN.LVColorDensityBlackLow 0/正常 (0): ""
+*zh_CN.LVColorDensityBlackLow -1/明亮 (-1): ""
+*zh_CN.LVColorDensityBlackLow -2/明亮 (-2): ""
+*zh_CN.LVColorDensityBlackLow -3/明亮 (-3): ""
+
+*zh_CN.Translation LVColorDensityBlackMid/中等浓度(K): ""
+*zh_CN.LVColorDensityBlackMid 3/暗色 (+3): ""
+*zh_CN.LVColorDensityBlackMid 2/暗色 (+2): ""
+*zh_CN.LVColorDensityBlackMid 1/暗色 (+1): ""
+*zh_CN.LVColorDensityBlackMid 0/正常 (0): ""
+*zh_CN.LVColorDensityBlackMid -1/明亮 (-1): ""
+*zh_CN.LVColorDensityBlackMid -2/明亮 (-2): ""
+*zh_CN.LVColorDensityBlackMid -3/明亮 (-3): ""
+
+*zh_CN.Translation LVColorDensityBlackHigh/高浓度(K): ""
+*zh_CN.LVColorDensityBlackHigh 3/暗色 (+3): ""
+*zh_CN.LVColorDensityBlackHigh 2/暗色 (+2): ""
+*zh_CN.LVColorDensityBlackHigh 1/暗色 (+1): ""
+*zh_CN.LVColorDensityBlackHigh 0/正常 (0): ""
+*zh_CN.LVColorDensityBlackHigh -1/明亮 (-1): ""
+*zh_CN.LVColorDensityBlackHigh -2/明亮 (-2): ""
+*zh_CN.LVColorDensityBlackHigh -3/明亮 (-3): ""
+
+*zh_CN.Translation AdvancedMedia/纸张处理: ""
+*zh_CN.Translation Collate/逐份打印: ""
+*zh_CN.Collate False/关: ""
+*zh_CN.Collate True/开: ""
+
+*zh_CN.Translation MediaType/纸张类型: ""
+*zh_CN.MediaType Plain/普通纸: ""
+*zh_CN.MediaType PlainThick/普通厚纸: ""
+*zh_CN.MediaType PlainThin/普通薄纸: ""
+*zh_CN.MediaType Label/标签: ""
+*zh_CN.MediaType Recycled/再生纸: ""
+
+*zh_CN.Translation PrinterFunction/打印机特定选项: ""
+*zh_CN.Translation LVSaveBlankSheet/跳过空白页: ""
+*zh_CN.LVSaveBlankSheet False/关: ""
+*zh_CN.LVSaveBlankSheet True/开: ""
+*zh_CN.Translation LVEncryptionMode/数据加密: ""
+*zh_CN.LVEncryptionMode False/关: ""
+*zh_CN.LVEncryptionMode True/开: ""
+*zh_CN.Translation LVPrintTrace/打印溯源: ""
+*zh_CN.LVPrintTrace False/关: ""
+*zh_CN.LVPrintTrace True/开: ""
+

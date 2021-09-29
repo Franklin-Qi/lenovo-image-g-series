@@ -1,0 +1,8 @@
+Package: lenovo-image-g-series
+Version: 1.0-16
+Architecture: arm64
+Maintainer: Lenovo Image(Tianjin) Technology Co., LTD. <lips@lenovo.com>
+Installed-Size: 15796
+Section: text
+Priority: optional
+Description: Printer Driver for lenovo-image-g-series

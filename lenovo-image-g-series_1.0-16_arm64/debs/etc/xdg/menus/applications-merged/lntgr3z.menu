@@ -1,0 +1,14 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+"http://www.freedesktop.org/standards/menu-spec/menu-1.0.dtd">
+<Menu>
+  <Name>Applications</Name>
+  <Menu>
+    <Name>Lenovo</Name>
+      <Directory>lntgr3z.directory</Directory>
+      <Include>
+	<Filename>lntgr3z_vop.desktop</Filename>	 
+	<Filename>lntgr3z_status.desktop</Filename>	
+	<Filename>lntgr3z_securitytool.desktop</Filename>	
+      </Include>
+  </Menu>
+</Menu>

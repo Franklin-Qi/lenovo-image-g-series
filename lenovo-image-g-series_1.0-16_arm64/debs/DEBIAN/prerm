@@ -1,0 +1,19 @@
+#!/bin/bash
+service lntgr3zserviced stop
+update-rc.d -f lntgr3zserviced remove
+
+if [ -n "$(pgrep lntgr3zsmui$)" ];then
+    kill -s 15 $(pgrep lntgr3zsmui$)
+fi
+
+if [ -n "$(pgrep lntgr3zvop$)" ];then
+    kill -s 15 $(pgrep lntgr3zvop$)
+fi
+
+if [ -n "$(pgrep lntgr3zsecuritytool$)" ];then
+    kill $(pgrep lntgr3zsecuritytool$)
+fi
+
+if [ -f /usr/share/lntgr3z/service.log ];then
+rm -rf /usr/share/lntgr3z/service.log
+fi
